@@ -18,7 +18,7 @@ SSH Account Management
 Script: add-ssh
 
 Request:
-
+```
 bash
 curl -X POST https://www.rerechan.biz.id/api/add-ssh \
   -H "Authorization: Bearer your_token" \
@@ -29,8 +29,9 @@ curl -X POST https://www.rerechan.biz.id/api/add-ssh \
     "masa": 30,
     "iplimit": 2
   }'
+  ```
 Success Response (200):
-
+```
 json
 {
   "status": "true",
@@ -58,19 +59,23 @@ json
   "config": "rerechan.biz.id:1-65535@john_doe:securepass123",
   "payload": "GET /ssh HTTP/1.1[crlf]Host: rerechan.biz.id[crlf]Upgrade: websocket[crlf][crlf]"
 }
-Error Response (400):
+```
 
+Error Response (400):
+```
 json
 {
   "status": "false",
   "code": 400,
   "message": "Username 'john_doe' is already in use"
 }
+```
+
 2. Delete SSH Account (DELETE)
 Script: delete-ssh
 
 Request:
-
+```
 bash
 curl -X DELETE https://www.rerechan.biz.id/api/delete-ssh \
   -H "Authorization: Bearer your_token" \
@@ -78,8 +83,10 @@ curl -X DELETE https://www.rerechan.biz.id/api/delete-ssh \
   -d '{
     "username": "john_doe"
   }'
+  ```
+  
 Success Response (200):
-
+```
 json
 {
   "status": "true",
@@ -91,19 +98,23 @@ json
     "recovery_backup": true
   }
 }
-Error Response (404):
+```
 
+Error Response (404):
+```
 json
 {
   "status": "false",
   "code": 404,
   "message": "User 'john_doe' does not exist in database"
 }
+```
+
 3. Extend SSH Account (PUT)
 Script: renew-ssh
 
 Request:
-
+```
 bash
 curl -X PUT https://www.rerechan.biz.id/api/renew-ssh \
   -H "Authorization: Bearer your_token" \
@@ -112,8 +123,10 @@ curl -X PUT https://www.rerechan.biz.id/api/renew-ssh \
     "username": "john_doe",
     "days": 30
   }'
+  ```
+  
 Success Response (200):
-
+```
 json
 {
   "status": "true",
@@ -127,11 +140,13 @@ json
     "system_updated": true
   }
 }
+```
+
 4. Create SSH Trial Account (POST)
 Script: trial-ssh
 
 Request:
-
+```
 bash
 curl -X POST https://www.rerechan.biz.id/api/trial-ssh \
   -H "Authorization: Bearer your_token" \
@@ -140,8 +155,10 @@ curl -X POST https://www.rerechan.biz.id/api/trial-ssh \
     "duration": "2h",
     "limit_ip": 1
   }'
+  ```
+  
 Success Response (201):
-
+```
 json
 {
   "status": "true",
@@ -167,12 +184,14 @@ json
     "telegram_notification": "sent"
   }
 }
+```
+
 Trojan Account Management
 1. Create Trojan Account (POST)
 Script: add-trojan
 
 Request:
-
+```
 bash
 curl -X POST https://www.rerechan.biz.id/api/add-trojan \
   -H "Authorization: Bearer your_token" \
@@ -184,8 +203,10 @@ curl -X POST https://www.rerechan.biz.id/api/add-trojan \
     "iplimit": 3,
     "duration": "30d"
   }'
-Success Response (201):
+```
 
+Success Response (201):
+```
 json
 {
   "status": "true",
@@ -221,19 +242,23 @@ json
     "telegram_notification": "sent"
   }
 }
-Error Response (409):
+```
 
+Error Response (409):
+```
 json
 {
   "status": "false",
   "code": 409,
   "message": "UUID '12345678-1234-1234-1234-123456789012' is already used by another user"
 }
+```
+
 2. Delete Trojan Account (DELETE)
 Script: delete-trojan
 
 Request:
-
+```
 bash
 curl -X DELETE https://www.rerechan.biz.id/api/delete-trojan \
   -H "Authorization: Bearer your_token" \
@@ -241,8 +266,10 @@ curl -X DELETE https://www.rerechan.biz.id/api/delete-trojan \
   -d '{
     "username": "trojan_user"
   }'
+  ```
+  
 Success Response (200):
-
+```
 json
 {
   "status": "true",
@@ -263,11 +290,13 @@ json
     "domain": "rerechan.biz.id"
   }
 }
+```
+
 3. Renew Trojan Account (PUT)
 Script: renew-trojan
 
 Request:
-
+```
 bash
 curl -X PUT https://www.rerechan.biz.id/api/renew-trojan \
   -H "Authorization: Bearer your_token" \
@@ -276,8 +305,10 @@ curl -X PUT https://www.rerechan.biz.id/api/renew-trojan \
     "username": "trojan_user",
     "days": 15
   }'
+  ```
+  
 Success Response (200):
-
+```
 json
 {
   "status": "true",
@@ -296,11 +327,13 @@ json
     "domain": "rerechan.biz.id"
   }
 }
+```
+
 4. Create Trojan Trial Account (POST)
 Script: trial-trojan
 
 Request:
-
+```
 bash
 curl -X POST https://www.rerechan.biz.id/api/trial-trojan \
   -H "Authorization: Bearer your_token" \
@@ -309,8 +342,10 @@ curl -X POST https://www.rerechan.biz.id/api/trial-trojan \
     "duration": "1h",
     "prefix": "test"
   }'
+  ```
+  
 Success Response (201):
-
+```
 json
 {
   "status": "true",
@@ -347,12 +382,14 @@ json
     "telegram_notification": "sent"
   }
 }
+```
+
 VLESS Account Management
 1. Create VLESS Account (POST)
 Script: add-vless
 
 Request:
-
+```
 bash
 curl -X POST https://www.rerechan.biz.id/api/add-vless \
   -H "Authorization: Bearer your_token" \
@@ -364,8 +401,10 @@ curl -X POST https://www.rerechan.biz.id/api/add-vless \
     "iplimit": 2,
     "duration": "14d"
   }'
+  ```
+  
 Success Response (201):
-
+```
 json
 {
   "status": "true",
@@ -402,11 +441,13 @@ json
     "telegram_notification": "sent"
   }
 }
+```
+
 2. Delete VLESS Account (DELETE)
 Script: delete-vless
 
 Request:
-
+```
 bash
 curl -X DELETE https://www.rerechan.biz.id/api/delete-vless \
   -H "Authorization: Bearer your_token" \
@@ -436,11 +477,13 @@ json
     "domain": "rerechan.biz.id"
   }
 }
+```
+
 3. Renew VLESS Account (PUT)
 Script: renew-vless
 
 Request:
-
+```
 bash
 curl -X PUT https://www.rerechan.biz.id/api/renew-vless \
   -H "Authorization: Bearer your_token" \
@@ -449,8 +492,10 @@ curl -X PUT https://www.rerechan.biz.id/api/renew-vless \
     "username": "vless_user",
     "days": 7
   }'
+  ```
+  
 Success Response (200):
-
+```
 json
 {
   "status": "true",
@@ -469,11 +514,13 @@ json
     "domain": "rerechan.biz.id"
   }
 }
+```
+
 4. Create VLESS Trial Account (POST)
 Script: trial-vless
 
 Request:
-
+```
 bash
 curl -X POST https://www.rerechan.biz.id/api/trial-vless \
   -H "Authorization: Bearer your_token" \
@@ -481,8 +528,10 @@ curl -X POST https://www.rerechan.biz.id/api/trial-vless \
   -d '{
     "duration": "30m"
   }'
+  ```
+  
 Success Response (201):
-
+```
 json
 {
   "status": "true",
@@ -520,12 +569,14 @@ json
     "telegram_notification": "sent"
   }
 }
+```
+
 VMESS Account Management
 1. Create VMESS Account (POST)
 Script: add-vmess
 
 Request:
-
+```
 bash
 curl -X POST https://www.rerechan.biz.id/api/add-vmess \
   -H "Authorization: Bearer your_token" \
@@ -537,8 +588,10 @@ curl -X POST https://www.rerechan.biz.id/api/add-vmess \
     "iplimit": 2,
     "duration": "7d"
   }'
+  ```
+  
 Success Response (201):
-
+```
 json
 {
   "status": "true",
@@ -576,11 +629,13 @@ json
     "telegram_notification": "sent"
   }
 }
+```
+
 2. Delete VMESS Account (DELETE)
 Script: delete-vmess
 
 Request:
-
+```
 bash
 curl -X DELETE https://www.rerechan.biz.id/api/delete-vmess \
   -H "Authorization: Bearer your_token" \
@@ -588,8 +643,10 @@ curl -X DELETE https://www.rerechan.biz.id/api/delete-vmess \
   -d '{
     "username": "vmess_user"
   }'
+  ```
+  
 Success Response (200):
-
+```
 json
 {
   "status": "true",
@@ -610,11 +667,13 @@ json
     "domain": "rerechan.biz.id"
   }
 }
+```
+
 3. Renew VMESS Account (PUT)
 Script: renew-vmess
 
 Request:
-
+```
 bash
 curl -X PUT https://www.rerechan.biz.id/api/renew-vmess \
   -H "Authorization: Bearer your_token" \
@@ -623,8 +682,10 @@ curl -X PUT https://www.rerechan.biz.id/api/renew-vmess \
     "username": "vmess_user",
     "days": 10
   }'
+  ```
+  
 Success Response (200):
-
+```
 json
 {
   "status": "true",
@@ -643,11 +704,13 @@ json
     "domain": "rerechan.biz.id"
   }
 }
+```
+
 4. Create VMESS Trial Account (POST)
 Script: trial-vmess
 
 Request:
-
+```
 bash
 curl -X POST https://www.rerechan.biz.id/api/trial-vmess \
   -H "Authorization: Bearer your_token" \
@@ -656,8 +719,10 @@ curl -X POST https://www.rerechan.biz.id/api/trial-vmess \
     "duration": "1h",
     "prefix": "demo"
   }'
+  ```
+  
 Success Response (201):
-
+```
 json
 {
   "status": "true",
@@ -696,76 +761,101 @@ json
     "telegram_notification": "sent"
   }
 }
+```
+
 Common Error Responses
 Authentication Error (401)
+```
 json
 {
   "status": "false",
   "code": 401,
   "message": "Unauthorized: Invalid or missing Bearer token"
 }
+```
+
 Validation Error (400)
+```
 json
 {
   "status": "false",
   "code": 400,
   "message": "Invalid JSON input or missing required fields"
 }
-Detailed Validation Error:
+```
 
+Detailed Validation Error:
+```
 json
 {
   "status": "false",
   "code": 400,
   "message": "Username can only contain letters, numbers and underscores"
 }
+```
+
 Resource Not Found (404)
+```
 json
 {
   "status": "false",
   "code": 404,
   "message": "User 'nonexistent_user' not found in database"
 }
+```
+
 Conflict Error (409)
+```
 json
 {
   "status": "false",
   "code": 409,
   "message": "A client with this username already exists"
 }
-UUID Conflict:
+```
 
+UUID Conflict:
+```
 json
 {
   "status": "false",
   "code": 409,
   "message": "UUID '12345678-1234-1234-1234-123456789012' is already used by another user"
 }
+```
+
 Server Error (500)
+```
 json
 {
   "status": "false",
   "code": 500,
   "message": "Internal server error: Failed to update Xray configuration"
 }
-Database Error:
+```
 
+Database Error:
+```
 json
 {
   "status": "false",
   "code": 500,
   "message": "Failed to update database file"
 }
-Service Error:
+```
 
+Service Error:
+```
 json
 {
   "status": "false",
   "code": 500,
   "message": "Failed to restart Xray service"
 }
+```
+
 Field Specifications
-Duration Format
+- Duration Format
 30m - 30 minutes
 
 2h - 2 hours
