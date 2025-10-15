@@ -19,11 +19,16 @@ KillSignal=SIGTERM
 LimitNPROC=10000
 LimitNOFILE=1000000
 
-# Security settings
-ProtectSystem=strict
+# Security settings - Modified untuk allow write access
+ProtectSystem=full
 ProtectHome=yes
-ReadWritePaths=/var/log /usr/local/sbin/api /etc/api
+ReadWritePaths=/var/log /usr/local/sbin/api /etc/api /etc/xray /tmp /var/tmp
+ReadOnlyPaths=/usr /boot /opt
+NoNewPrivileges=yes
 PrivateTmp=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
 
 # Logging
 StandardOutput=journal
