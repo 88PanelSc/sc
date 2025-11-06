@@ -18,8 +18,7 @@ SSH Account Management
 Script: add-ssh
 
 Request:
-```
-bash
+```bash
 curl -X POST https://www.rerechan.biz.id/api/add-ssh \
   -H "Authorization: Bearer your_token" \
   -H "Content-Type: application/json" \
@@ -31,8 +30,7 @@ curl -X POST https://www.rerechan.biz.id/api/add-ssh \
   }'
   ```
 Success Response (200):
-```
-json
+```json
 {
   "status": "true",
   "code": 200,
@@ -62,8 +60,7 @@ json
 ```
 
 Error Response (400):
-```
-json
+```json
 {
   "status": "false",
   "code": 400,
@@ -75,8 +72,7 @@ json
 Script: delete-ssh
 
 Request:
-```
-bash
+```bash
 curl -X DELETE https://www.rerechan.biz.id/api/delete-ssh \
   -H "Authorization: Bearer your_token" \
   -H "Content-Type: application/json" \
@@ -86,8 +82,7 @@ curl -X DELETE https://www.rerechan.biz.id/api/delete-ssh \
   ```
   
 Success Response (200):
-```
-json
+```json
 {
   "status": "true",
   "code": 200,
@@ -101,8 +96,7 @@ json
 ```
 
 Error Response (404):
-```
-json
+```json
 {
   "status": "false",
   "code": 404,
@@ -114,8 +108,7 @@ json
 Script: renew-ssh
 
 Request:
-```
-bash
+```bash
 curl -X PUT https://www.rerechan.biz.id/api/renew-ssh \
   -H "Authorization: Bearer your_token" \
   -H "Content-Type: application/json" \
@@ -126,8 +119,7 @@ curl -X PUT https://www.rerechan.biz.id/api/renew-ssh \
   ```
   
 Success Response (200):
-```
-json
+```json
 {
   "status": "true",
   "code": 200,
@@ -146,8 +138,7 @@ json
 Script: trial-ssh
 
 Request:
-```
-bash
+```bash
 curl -X POST https://www.rerechan.biz.id/api/trial-ssh \
   -H "Authorization: Bearer your_token" \
   -H "Content-Type: application/json" \
@@ -158,8 +149,7 @@ curl -X POST https://www.rerechan.biz.id/api/trial-ssh \
   ```
   
 Success Response (201):
-```
-json
+```json
 {
   "status": "true",
   "code": 201,
@@ -191,8 +181,7 @@ Trojan Account Management
 Script: add-trojan
 
 Request:
-```
-bash
+```bash
 curl -X POST https://www.rerechan.biz.id/api/add-trojan \
   -H "Authorization: Bearer your_token" \
   -H "Content-Type: application/json" \
@@ -206,8 +195,7 @@ curl -X POST https://www.rerechan.biz.id/api/add-trojan \
 ```
 
 Success Response (201):
-```
-json
+```json
 {
   "status": "true",
   "code": 201,
@@ -245,8 +233,7 @@ json
 ```
 
 Error Response (409):
-```
-json
+```json
 {
   "status": "false",
   "code": 409,
@@ -258,8 +245,7 @@ json
 Script: delete-trojan
 
 Request:
-```
-bash
+```bash
 curl -X DELETE https://www.rerechan.biz.id/api/delete-trojan \
   -H "Authorization: Bearer your_token" \
   -H "Content-Type: application/json" \
@@ -269,8 +255,7 @@ curl -X DELETE https://www.rerechan.biz.id/api/delete-trojan \
   ```
   
 Success Response (200):
-```
-json
+```json
 {
   "status": "true",
   "code": 200,
@@ -296,8 +281,7 @@ json
 Script: renew-trojan
 
 Request:
-```
-bash
+```bash
 curl -X PUT https://www.rerechan.biz.id/api/renew-trojan \
   -H "Authorization: Bearer your_token" \
   -H "Content-Type: application/json" \
@@ -308,8 +292,7 @@ curl -X PUT https://www.rerechan.biz.id/api/renew-trojan \
   ```
   
 Success Response (200):
-```
-json
+```json
 {
   "status": "true",
   "code": 200,
@@ -333,8 +316,7 @@ json
 Script: trial-trojan
 
 Request:
-```
-bash
+```bash
 curl -X POST https://www.rerechan.biz.id/api/trial-trojan \
   -H "Authorization: Bearer your_token" \
   -H "Content-Type: application/json" \
@@ -345,8 +327,7 @@ curl -X POST https://www.rerechan.biz.id/api/trial-trojan \
   ```
   
 Success Response (201):
-```
-json
+```json
 {
   "status": "true",
   "code": 201,
@@ -389,8 +370,7 @@ VLESS Account Management
 Script: add-vless
 
 Request:
-```
-bash
+```bash
 curl -X POST https://www.rerechan.biz.id/api/add-vless \
   -H "Authorization: Bearer your_token" \
   -H "Content-Type: application/json" \
@@ -404,8 +384,7 @@ curl -X POST https://www.rerechan.biz.id/api/add-vless \
   ```
   
 Success Response (201):
-```
-json
+```json
 {
   "status": "true",
   "code": 201,
@@ -447,8 +426,7 @@ json
 Script: delete-vless
 
 Request:
-```
-bash
+```bash
 curl -X DELETE https://www.rerechan.biz.id/api/delete-vless \
   -H "Authorization: Bearer your_token" \
   -H "Content-Type: application/json" \
@@ -483,8 +461,7 @@ json
 Script: renew-vless
 
 Request:
-```
-bash
+```bash
 curl -X PUT https://www.rerechan.biz.id/api/renew-vless \
   -H "Authorization: Bearer your_token" \
   -H "Content-Type: application/json" \
@@ -495,8 +472,7 @@ curl -X PUT https://www.rerechan.biz.id/api/renew-vless \
   ```
   
 Success Response (200):
-```
-json
+```json
 {
   "status": "true",
   "code": 200,
@@ -520,8 +496,7 @@ json
 Script: trial-vless
 
 Request:
-```
-bash
+```bash
 curl -X POST https://www.rerechan.biz.id/api/trial-vless \
   -H "Authorization: Bearer your_token" \
   -H "Content-Type: application/json" \
@@ -531,8 +506,7 @@ curl -X POST https://www.rerechan.biz.id/api/trial-vless \
   ```
   
 Success Response (201):
-```
-json
+```json
 {
   "status": "true",
   "code": 201,
@@ -576,8 +550,7 @@ VMESS Account Management
 Script: add-vmess
 
 Request:
-```
-bash
+```bash
 curl -X POST https://www.rerechan.biz.id/api/add-vmess \
   -H "Authorization: Bearer your_token" \
   -H "Content-Type: application/json" \
@@ -591,8 +564,7 @@ curl -X POST https://www.rerechan.biz.id/api/add-vmess \
   ```
   
 Success Response (201):
-```
-json
+```json
 {
   "status": "true",
   "code": 201,
@@ -635,8 +607,7 @@ json
 Script: delete-vmess
 
 Request:
-```
-bash
+```bash
 curl -X DELETE https://www.rerechan.biz.id/api/delete-vmess \
   -H "Authorization: Bearer your_token" \
   -H "Content-Type: application/json" \
@@ -646,8 +617,7 @@ curl -X DELETE https://www.rerechan.biz.id/api/delete-vmess \
   ```
   
 Success Response (200):
-```
-json
+```json
 {
   "status": "true",
   "code": 200,
@@ -673,8 +643,7 @@ json
 Script: renew-vmess
 
 Request:
-```
-bash
+```bash
 curl -X PUT https://www.rerechan.biz.id/api/renew-vmess \
   -H "Authorization: Bearer your_token" \
   -H "Content-Type: application/json" \
@@ -685,8 +654,7 @@ curl -X PUT https://www.rerechan.biz.id/api/renew-vmess \
   ```
   
 Success Response (200):
-```
-json
+```json
 {
   "status": "true",
   "code": 200,
@@ -710,8 +678,7 @@ json
 Script: trial-vmess
 
 Request:
-```
-bash
+```bash
 curl -X POST https://www.rerechan.biz.id/api/trial-vmess \
   -H "Authorization: Bearer your_token" \
   -H "Content-Type: application/json" \
@@ -722,8 +689,7 @@ curl -X POST https://www.rerechan.biz.id/api/trial-vmess \
   ```
   
 Success Response (201):
-```
-json
+```json
 {
   "status": "true",
   "code": 201,
@@ -765,8 +731,7 @@ json
 
 Common Error Responses
 Authentication Error (401)
-```
-json
+```json
 {
   "status": "false",
   "code": 401,
@@ -775,8 +740,7 @@ json
 ```
 
 Validation Error (400)
-```
-json
+```json
 {
   "status": "false",
   "code": 400,
@@ -785,8 +749,7 @@ json
 ```
 
 Detailed Validation Error:
-```
-json
+```json
 {
   "status": "false",
   "code": 400,
@@ -795,8 +758,7 @@ json
 ```
 
 Resource Not Found (404)
-```
-json
+```json
 {
   "status": "false",
   "code": 404,
@@ -805,8 +767,7 @@ json
 ```
 
 Conflict Error (409)
-```
-json
+```json
 {
   "status": "false",
   "code": 409,
@@ -815,8 +776,7 @@ json
 ```
 
 UUID Conflict:
-```
-json
+```json
 {
   "status": "false",
   "code": 409,
@@ -825,8 +785,7 @@ json
 ```
 
 Server Error (500)
-```
-json
+```json
 {
   "status": "false",
   "code": 500,
@@ -835,8 +794,7 @@ json
 ```
 
 Database Error:
-```
-json
+```json
 {
   "status": "false",
   "code": 500,
@@ -845,8 +803,7 @@ json
 ```
 
 Service Error:
-```
-json
+```json
 {
   "status": "false",
   "code": 500,
